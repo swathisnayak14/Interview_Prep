@@ -1,4 +1,5 @@
-// Given two arrays X and Y of positive integers, find the number of pairs such that xy > yx (raised to power of) where x is an element from X and y is an element from Y.
+// Given two arrays X and Y of positive integers, find the number of pairs such that xy > yx (raised to power of) 
+//where x is an element from X and y is an element from Y.
 
 // Example 1:
 

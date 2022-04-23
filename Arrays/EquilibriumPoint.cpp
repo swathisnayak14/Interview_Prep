@@ -29,16 +29,16 @@ int equipoint(int arr[], int n)
 {
     int pos = -1, leftSum = 0, rightSum = 0;
     for (int i = 0; i < n; i++)
-        rightSum += arr[i];
+        rightSum += arr[i];//13
     for (int i = 0; i < n; i++)
     {
-        rightSum -= arr[i];
+        rightSum -= arr[i];//9
         if (leftSum == rightSum)
         {
             pos = i + 1;
             break;
         }
-        leftSum += arr[i];
+        leftSum += arr[i];//9
     }
     return pos;
 }

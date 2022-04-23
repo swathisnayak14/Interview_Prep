@@ -1,4 +1,5 @@
-// Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.
+// Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the maximum sum 
+//and return its sum.
 
 // Example 1:
 
@@ -23,10 +24,10 @@ int main()
     int Lmax = a[0], Gmax = a[0];
     for (int i = 1; i < n; i++)
     {
-        if (a[i] > (a[i] + Lmax))
+        if (a[i] > (a[i] + Lmax))//5>8
             Lmax = a[i];
         else
-            Lmax += a[i];
+            Lmax += a[i];//3
         Gmax = max(Gmax, Lmax);
     }
     cout << Gmax;
