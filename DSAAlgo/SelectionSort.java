@@ -22,8 +22,8 @@ public class SelectionSort {
         int temp=arr[first];
         arr[first]=arr[end];
         arr[end]=temp;
-
     }
+    
     static int getMaxIndex(int arr[],int start,int end)
     {
         int max=start;
