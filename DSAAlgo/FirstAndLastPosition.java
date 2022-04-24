@@ -21,48 +21,52 @@
 public class FirstAndLastPosition {
     public static void main(String args[])
     {
-        
+        int[] nums={5,7,7,8,8,10};
+        int target=7;
+        int[] ans=searchRange(nums,target);
+        System.out.println(ans);
     }
-    public int[] firstLastPos(int arr[],int target)
-{
-    int ans[]={-1,-1};
-    int start=search(arr,target,true);
-    int end=search(arr,target,false);
-    ans[0]=start;
-    ans[1]=end;
-
-    return ans;
-}
-//returns the index value of the target
-    int search(int arr[],int target,boolean firstStartIndex)
-{
-    int start=0;
-    int end=arr.length-1;
-    int answer=-1;
-    while(start<=end)
+    public static int[] searchRange(int[] nums, int target) 
     {
-        int mid=start+(end-start)/2;
+        int ans[]={-1,-1};
+        ans[0]=search(nums,target,true);
+        if(ans[0]!=-1){
+            ans[1]=search(nums,target,false);
+        }
 
-        if(target<arr[mid])
+        return ans;
+    }
+//returns the index value of the target
+    static int search(int arr[],int target,boolean firstStartIndex)
+    {
+        int start=0;
+        int end=arr.length-1;
+        int answer=-1;
+        while(start<=end)
         {
-            end=mid-1;
-        }
-        else if(target>arr[mid])
-        {
-            start=mid+1;
-        }
-        else{
-            answer=mid;
-            if(firstStartIndex)
+            int mid=start+(end-start)/2;
+
+            if(target<arr[mid])
             {
                 end=mid-1;
             }
-            else    
+            else if(target>arr[mid])
+            {
                 start=mid+1;
+            }
+            else
+            {
+                answer=mid;
+                if(firstStartIndex)
+                {
+                    end=mid-1;
+                }
+                else    
+                    start=mid+1;
+            }
         }
+        return answer;
     }
-    return answer;
-}
 }
 
 
