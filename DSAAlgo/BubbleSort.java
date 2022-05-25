@@ -12,7 +12,7 @@ public class BubbleSort {
         boolean swapped;
         for(int i=0;i<arr.length;i++)
         {
-            swapped=false; //if the array os already sorted then after the iteration of the i=0, the loop will break 
+            swapped=false; //if the array is already sorted then after the iteration of the i=0, the loop will break 
             for(int j=1;j<arr.length-i;j++)
             {
                 if(arr[j]<arr[j-1])

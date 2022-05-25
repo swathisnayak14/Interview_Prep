@@ -1,28 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice.
+// Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums.
 
-// You must write an algorithm that runs in O(n) time and uses only constant extra space.
-
-//https://leetcode.com/problems/find-all-duplicates-in-an-array/
+//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 
 // Example 1:
 
 // Input: nums = [4,3,2,7,8,2,3,1]
-// Output: [2,3]
+// Output: [5,6]
 // Example 2:
 
-// Input: nums = [1,1,2]
-// Output: [1]
-// Example 3:
+// Input: nums = [1,1]
+// Output: [2]
 
-// Input: nums = [1]
-// Output: []
-
-public class AllDuplicatesInArray {
+public class AllElementsDuplicates {
     public static void main(String[] args) {
-        int[] arr={4,3,2,7,8,2,3,1};
+        int[] arr={4,3,2,7,8,2,3,1,8,7};
         System.out.println(cyclic(arr));
     }
 
@@ -45,7 +39,7 @@ public class AllDuplicatesInArray {
        {
            if(arr[index]!=index+1)
            {
-               ans.add(index+1);
+               ans.add(arr[index]);
            }
        }
        return ans;
@@ -56,4 +50,5 @@ public class AllDuplicatesInArray {
         arr[first]=arr[second];
         arr[second]=temp;
     }
+    
 }

@@ -1,4 +1,5 @@
-// Given a characters array letters that is sorted in non-decreasing order and a character target, return the smallest character in the array that is larger than target.
+// Given a characters array letters that is sorted in non-decreasing order and a character target, return the smallest 
+//character in the array that is larger than target.
 
 // Note that the letters wrap around.
 
@@ -26,11 +27,6 @@ using namespace std;
 
 char smallestLetter(char arr[],int n,int target)
 {
-    if(target>arr[n-1])
-    {
-        return -1;
-    }
-
     int start=0;
     int end=n-1;
     while(start<=end)

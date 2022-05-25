@@ -22,7 +22,7 @@ int floor(int arr[],int n,int target)
             end=mid-1;
         }
         else if(target>arr[mid])
-        {
+        {   
             start=mid+1;
         }
         else

@@ -13,7 +13,7 @@
 
 public class PeakIndexMountain{
     public static void main(String[] args) {
-        int[] arr={0,2,1,0};
+        int[] arr={0,15,20,2};
         int ans=peakIndex(arr);
        System.out.println(ans);
     }
@@ -21,7 +21,7 @@ public class PeakIndexMountain{
     static int peakIndex(int arr[])
     {
         int start=0;
-        int end=arr.length;
+        int end=arr.length-1;
         while(start<end)
         {   
             int mid=start+(end-start)/2;

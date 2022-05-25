@@ -29,7 +29,7 @@ public class FirstMissingPositive {
         while(i<arr.length)
         {
             int correctIndex=arr[i]-1;//if index is 4 then the correct number for that index is 4
-            if(arr[i]>0 && arr[i]<=arr.length && arr[i]!=arr[correctIndex])
+            if(arr[i]>0 && arr[i]<=arr.length && arr[i]!=arr[correctIndex])//we r ignoring only the elements greater than or equal to length
             {
                 swap(arr,i,correctIndex);
             }
