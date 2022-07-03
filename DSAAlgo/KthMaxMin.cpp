@@ -6,8 +6,8 @@
 using namespace std;
 int main()
 {
-    int k=5,n=12;
-    vector<int> arr={5,9,1,4,6,7,8,2,0,4,-5,-3};
+    int k=1,n=10;
+    vector<int> arr={5,9,1,4,6,7,8,2,0,4,-5,-3};//{-5,-3,0,1,2,4,4,5,6,7,8,9}
     sort(arr.begin(),arr.end());
     cout<<"Kth smallest element is : "<<arr[k-1]<<endl;
     cout<<"Kth largest element is : "<<arr[n-k]<<endl;
