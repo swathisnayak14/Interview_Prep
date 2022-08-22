@@ -34,7 +34,7 @@ int main()
     int arr[n];
     for(int i=0;i<n;i++)
     {
-        cin>>a[i];
+        cin>>arr[i];
     }
     MaxDiff(arr,n);
     return 0;

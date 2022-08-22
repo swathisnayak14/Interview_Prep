@@ -11,9 +11,9 @@ void findDuplicate(int arr[], int n)
     set<int> s;
     for (int i = 0; i < n; i++)
         s.insert(arr[i]);
-        set<int>::iterator it;
-        for(it=s.begin();it!=s.end();it++)
-            cout<<*it<<" ";
+    set<int>::iterator it;
+    for (it = s.begin(); it != s.end(); it++)
+        cout << *it << " ";
 }
 int main()
 {
