@@ -19,37 +19,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool anagram(string s1, string s2)
+int anagram(string a, string b)
 {
-    int c[26] = {0};
-    int d[26] = {0};
-    int len1 = s1.length();
-    int len2 = s2.length();
-    int flag = 0;
-    if (len1 != len2)
-        return false;
-    for (int i = 0; i < len1; i++)
+    map<char, int> mp;
+    int n1 = a.size();
+    int n2 = b.size();
+    if (n1 != n2)
     {
-        c[s1[i] - 'a']++;
-        d[s2[i] - 'a']++;
+        cout << "No";
+        return 0;
     }
-    for (int i = 0; i < 26; i++)
+    for (auto i:a)
     {
-        if (c[i] != d[i])
-        {
-            flag = 1;
-            break;
-        }
+        mp[i]++;
     }
-    if (flag == 1)
-        return false;
-    else
-        return true;
+
+    for (auto i:b)
+    {
+        mp[i]--;
+    }
+
+    for (auto it : mp)
+    {
+        if (it.second != 0)
+            return 0;
+    }
+    return 1;
 }
 int main()
 {
-    string a, b;
-    cin >> a >> b;
-    cout << anagram(a, b);
+    string a = "geeksforgeeks", b = "forgeekegeeke";
+    if(anagram(a, b))
+    {
+        cout<<"Yes";
+    }
+    else
+        cout<<"No";
     return 0;
 }
