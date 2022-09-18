@@ -1,5 +1,5 @@
-// A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of lowercase and
-// uppercase English letters.
+// A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of lowercase 
+//and uppercase English letters.
 
 // A sentence can be shuffled by appending the 1-indexed word position to each word then rearranging the words in the sentence.
 
@@ -22,7 +22,7 @@ using namespace std;
 
 void sortingASentence(string str)
 {
-    vector<string> v(10);
+    vector<string> v(10);//10 coz in question its told no more than 9 words
     string word;
     string ans;
     for (int i = 0; i < str.size(); i++)
@@ -42,7 +42,7 @@ void sortingASentence(string str)
     {
         ans += x;
     }
-    ans.pop_back(); // as in the end space will be left coz of line no 31 we should remove that
+    ans.pop_back(); // as in the end space will be left coz of line no. 31 we should remove that
     cout << ans;
 }
 
