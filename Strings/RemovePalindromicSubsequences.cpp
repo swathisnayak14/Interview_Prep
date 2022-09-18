@@ -44,7 +44,7 @@ int removePalindromicSubsequences(string str)
         else
             return 2;
     }
-    return 1;
+    return 1;//if its a palindrome
 }
 
 int main()

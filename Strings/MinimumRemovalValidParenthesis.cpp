@@ -34,10 +34,11 @@ void minimumRemoval(string str)
     {
         if (str[i] == '(')
         {
-            st.push(i); // we push the index of that particular bracket as there can be many closing anf opening brackets and it wont bw easy to see which one to delete.
+            st.push(i); // we push the index of that particular bracket as there can be many closing anf opening brackets and it wont be
+                        // easy to see which one to delete.
         }
 
-        else if(str[i]==')')
+        else if (str[i] == ')')
         {
             if (!st.empty() && str[st.top()] == '(')
             {
@@ -48,12 +49,12 @@ void minimumRemoval(string str)
         }
     }
 
-    while(!st.empty())//removing watever elements are there in the stack.
+    while (!st.empty()) // removing watever elements are there in the stack.
     {
-        str.erase(st.top(),1);//removing 1 element at a time
+        str.erase(st.top(), 1); // removing 1 element at a time
         st.pop();
     }
-    cout<<str;
+    cout << str;
 }
 
 int main()
