@@ -28,7 +28,7 @@ void smallestString(int n, int k)
     {
         if (k > 25)
         {
-            v[i] = 26; // checking if k>25, ie: if its 26 then we add teh last element will 25.
+            v[i] = 26; // checking if k>25, ie: if its 26 then we add the last element will 25.
             k = k - 25;
             i--; // moving to the last but one element
         }

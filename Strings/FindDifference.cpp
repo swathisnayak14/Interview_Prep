@@ -35,7 +35,7 @@ char findDifference(string s, string t)
         }
     }
 
-    for (char e : t) // if the dtring t is present then delete that eleement from the map
+    for (char e : t) // if the string t is present then delete that element from the map
     {
         it = m.find(e);
         if (it != m.end()) // if the element is there in the map then decrement the count

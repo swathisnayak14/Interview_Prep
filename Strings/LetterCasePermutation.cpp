@@ -16,7 +16,7 @@ using namespace std;
 vector<string> output;
 vector<string> letterCasePermutation(string str)
 {
-    
+
     transform(str.begin(), str.end(), str.begin(), ::tolower);
     output.push_back(str);
 
@@ -24,25 +24,25 @@ vector<string> letterCasePermutation(string str)
     {
         if (isalpha(str[i]))
         {
-            add(toupper(str[i]), i); // we create a function and pass the latter to change in the given string in the output. So whatever string is present in the output
-                                     //  vector for all those the corresponding letter is changed.
+            add(toupper(str[i]), i); // we create a function and pass the letter to change in the given string in the output. So whatever
+            //  string is present in the output vector for all those the corresponding letter is changed.
         }
     }
     return output;
 }
 
-void add(char n,int pos)
+void add(char n, int pos)
 {
-    int count=1;//put this as a global variable
-    int i=0;
-    while(i<count)//count tells the number of strings present in the output vector
+    int count = 1; // put this as a global variable
+    int i = 0;
+    while (i < count) // count tells the number of strings present in the output vector
     {
-        string x=output[i];
-        x[pos]=n;
+        string x = output[i];
+        x[pos] = n;
         output.push_back(x);
-        i++;//goes to change the next string in the output vector
+        i++; // goes to change the next string in the output vector
     }
-    count+=count;//at first the count was 1, next ot becomes 2 and then 4 as we will have 2 strings to modify and so 2 more strings will be added.
+    count += count; // at first the count was 1, next ot becomes 2 and then 4 as we will have 2 strings to modify and so 2 more strings will be added.
 }
 
 int main()
