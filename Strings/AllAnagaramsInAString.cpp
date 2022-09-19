@@ -24,13 +24,14 @@ using namespace std;
 
 vector<int> allAnagramString(string s, string p)
 {
+    if(s.size()<p.size()) return {};
     vector<int> phash(26, 0);
     vector<int> shash(26, 0);
     vector<int> result;
     for (int i = 0; i < p.size(); i++)
     {
-        phash[p[i - 'a']]++;
-        shash[p[i - 'a']]++;
+        phash[p[i] - 'a']++;
+        shash[s[i] - 'a']++;
     }
 
     if (phash == shash)
@@ -39,10 +40,10 @@ vector<int> allAnagramString(string s, string p)
     for (int i = p.size(); i < s.size(); i++) // works for other indexes. The value of the phash will remain the same, only the shash will change as we are moving
                                               // the index value.
     {
-        shash[p[i - 'a']]++;            // Adding the next element that we included using sliding window
-        shash[s[i - p.size()] - 'a']--; // eg:abab in this first we choose aba and see if its an anagram will ab and then next we want to move to bab, so we have the
-                                        // index at a=2 as we have initial index as p.size() which is 2 where p="ab" so for i++ we have i=3 we need to subtract the first a here. so
-                                        // we have s[3-3]-'a=s[0] we will delete
+        shash[s[i] - 'a']++;                    // Adding the next element that we included using sliding window
+        shash[s[i - p.size()] - 'a']--;         // eg:abab in this first we choose aba and see if its an anagram will ab and then next we want to move to bab, so we have the
+                                                // index at a=2 as we have initial index as p.size() which is 2 where p="ab" so for i++ we have i=3 we need to subtract the first a here. so
+                                                // we have s[3-3]-'a=s[0] we will delete
         if (phash == shash)                     // here we check if both are equal
             result.push_back(i + 1 - p.size()); // if so then we push back 3+1-3=1 ie: index one as the starting index of the anagram
     }

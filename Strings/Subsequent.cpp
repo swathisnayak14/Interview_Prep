@@ -26,7 +26,7 @@ bool subseq(string s, string t)
         j++;
     }
 
-    return i == m ? 1 : 0;
+    return i == m ? 1 : 0;//reached the end then its true
 }
 
 int main()
