@@ -18,6 +18,17 @@ int removeAVal(vector<int> &nums, int val)
         }
     }
     return i;
+
+    //    vector<int>::iterator it=nums.begin();
+    //    while(it!=nums.end())
+    //    {
+    //        if(*it==val)
+    //             it=nums.erase(it);
+    //         else
+    //             it++;
+    //    }
+    //     int len=nums.size();
+    //     return len;
 }
 
 int main()
